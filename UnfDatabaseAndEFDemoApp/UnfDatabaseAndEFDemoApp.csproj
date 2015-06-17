@@ -201,6 +201,12 @@
     <TypeScriptCompile Include="Scripts\flux\event.ts" />
     <TypeScriptCompile Include="Scripts\flux\reactor.ts" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.Domain\UnfDatabaseAndEFDemoApp.Domain.csproj">
+      <Project>{f4a9a668-6a4b-4854-bb57-ace481945292}</Project>
+      <Name>UnfDatabaseAndEFDemoApp.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

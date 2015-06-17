@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UnfDatabaseAndEFDemoApp.Domain;
 
 namespace UnfDatabaseAndEFDemoApp.Controllers
 {
@@ -78,19 +79,5 @@ namespace UnfDatabaseAndEFDemoApp.Controllers
         {
             return View(_bugs);
         }
-    }
-
-    public class BugListItem
-    {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public BugStatus Status { get; set; }
-    }
-
-    public enum BugStatus
-    {
-        New,
-        InProgress,
-        Completed
     }
 }
