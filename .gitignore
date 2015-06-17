@@ -203,3 +203,17 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+/UnfDatabaseAndEFDemoApp/Scripts/flux/base-store.js
+/UnfDatabaseAndEFDemoApp/Scripts/flux/base-store.js.map
+/UnfDatabaseAndEFDemoApp/Scripts/flux/dispatcher.js
+/UnfDatabaseAndEFDemoApp/Scripts/flux/dispatcher.js.map
+/UnfDatabaseAndEFDemoApp/Scripts/flux/event.js
+/UnfDatabaseAndEFDemoApp/Scripts/flux/event.js.map
+/UnfDatabaseAndEFDemoApp/Scripts/flux/reactor.js
+/UnfDatabaseAndEFDemoApp/Scripts/flux/reactor.js.map
+/UnfDatabaseAndEFDemoApp/Scripts/app/bugs/models.js
+/UnfDatabaseAndEFDemoApp/Scripts/app/bugs/models.js.map
+/UnfDatabaseAndEFDemoApp/Scripts/app/bugs/actions.js
+/UnfDatabaseAndEFDemoApp/Scripts/app/bugs/actions.js.map
+/UnfDatabaseAndEFDemoApp/Scripts/app/bugs/store.js
+/UnfDatabaseAndEFDemoApp/Scripts/app/bugs/store.js.map
