@@ -81,19 +81,4 @@ var Bug = React.createClass({
 
 });
 
-var bugsTempList = [
-    { id: 1, title: "Sample Bug 1", status: 0 },
-    { id: 2, title: "Sample Bug 2", status: 0 },
-    { id: 3, title: "Sample Bug 3", status: 0 },
-    { id: 4, title: "Sample Bug 4", status: 1 },
-    { id: 5, title: "Sample Bug 5", status: 1 },
-    { id: 6, title: "Sample Bug 6", status: 1 },
-    { id: 7, title: "Sample Bug 7", status: 2 },
-    { id: 8, title: "Sample Bug 8", status: 2 },
-    { id: 9, title: "Sample Bug 9", status: 2 }
-];
-
-React.render (
-    <Bugs bugs={bugsTempList}/>,
-    document.getElementById('content')
-);
+var BugsFactory = React.createFactory(Bugs);
