@@ -60,6 +60,21 @@
       <HintPath>..\packages\JSPool.0.3.0\lib\net40-Client\JSPool.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Mvc">
+      <HintPath>..\packages\Unity.Mvc.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -177,6 +192,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\ReactConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Controllers\BugsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -202,9 +219,17 @@
     <TypeScriptCompile Include="Scripts\flux\reactor.ts" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.DependencyManager\UnfDatabaseAndEFDemoApp.DependencyManager.csproj">
+      <Project>{0dd06e62-9253-4bbf-9988-01c17c44af7e}</Project>
+      <Name>UnfDatabaseAndEFDemoApp.DependencyManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.Domain\UnfDatabaseAndEFDemoApp.Domain.csproj">
       <Project>{f4a9a668-6a4b-4854-bb57-ace481945292}</Project>
       <Name>UnfDatabaseAndEFDemoApp.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.Services\UnfDatabaseAndEFDemoApp.Services.csproj">
+      <Project>{781c7b7f-4d7d-421a-8759-11d6cf198e9d}</Project>
+      <Name>UnfDatabaseAndEFDemoApp.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
