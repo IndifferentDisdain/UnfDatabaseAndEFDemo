@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnfDatabaseAndEFDemoApp.Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnfDatabaseAndEFDemoApp.Services.EF", "UnfDatabaseAndEFDemoApp.Services.EF\UnfDatabaseAndEFDemoApp.Services.EF.csproj", "{4A8D689F-0279-4777-A4DA-E535432FA887}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "UnfDatabaseAndEFDemoApp.SqlServer", "UnfDatabaseAndEFDemoApp.SqlServer\UnfDatabaseAndEFDemoApp.SqlServer.sqlproj", "{41D1A5B1-5F91-477F-9700-3BF3C8EF5811}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,12 @@ Global
 		{4A8D689F-0279-4777-A4DA-E535432FA887}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A8D689F-0279-4777-A4DA-E535432FA887}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A8D689F-0279-4777-A4DA-E535432FA887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41D1A5B1-5F91-477F-9700-3BF3C8EF5811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41D1A5B1-5F91-477F-9700-3BF3C8EF5811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41D1A5B1-5F91-477F-9700-3BF3C8EF5811}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{41D1A5B1-5F91-477F-9700-3BF3C8EF5811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41D1A5B1-5F91-477F-9700-3BF3C8EF5811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41D1A5B1-5F91-477F-9700-3BF3C8EF5811}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
