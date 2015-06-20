@@ -17,11 +17,11 @@ namespace BugTracker.Services.EF
             
         }
 
-        public DbSet<BugListItem> BugListItems { get; set; }
+        public DbSet<Bug> Bugs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<BugListItem>().ToTable("Bug");
+            modelBuilder.Entity<Bug>().ToTable("Bug");
             
             base.OnModelCreating(modelBuilder);
         }

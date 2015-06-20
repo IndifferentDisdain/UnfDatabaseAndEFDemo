@@ -9,13 +9,13 @@ namespace BugTracker.Services.ADO
 {
     public class BugQueryService : ServiceBase, IBugQueryService
     {
-        public async Task<IList<BugListItem>> GetBugsList()
+        public async Task<IList<Bug>> GetBugsList()
         {
             using (var conn = new SqlConnection(ConnectionString))
             {
                 using (var cmd = conn.CreateCommand())
                 {
-                    var retVal = new List<BugListItem>();
+                    var retVal = new List<Bug>();
 
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = "SELECT Id, Title, Status FROM Bug ORDER BY Id";
@@ -27,7 +27,7 @@ namespace BugTracker.Services.ADO
                         {
                             while (await reader.ReadAsync())
                             {
-                                retVal.Add(new BugListItem
+                                retVal.Add(new Bug
                                 {
                                     Id = int.Parse(reader["Id"].ToString()),
                                     Title = reader["Title"].ToString(),

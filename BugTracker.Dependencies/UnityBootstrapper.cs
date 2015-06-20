@@ -33,11 +33,13 @@ namespace BugTracker.Dependencies
         private static void RegisterServicesForADO(this IUnityContainer container)
         {
             container.RegisterType<IBugQueryService, ADO.BugQueryService>();
+            container.RegisterType<IBugCommandService, ADO.BugCommandService>();
         }
 
         private static void RegisterServicesForEF(this IUnityContainer container)
         {
             container.RegisterType<IBugQueryService, EF.BugQueryService>();
+            container.RegisterType<IBugCommandService, EF.BugCommandService>();
         }
     }
 }

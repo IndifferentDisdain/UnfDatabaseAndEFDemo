@@ -6,6 +6,6 @@ namespace BugTracker.Services
 {
     public interface IBugQueryService
     {
-        Task<IList<BugListItem>> GetBugsList();
+        Task<IList<Bug>> GetBugsList();
     }
 }

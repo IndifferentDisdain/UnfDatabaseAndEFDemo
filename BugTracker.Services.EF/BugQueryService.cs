@@ -8,11 +8,11 @@ namespace BugTracker.Services.EF
 {
     public class BugQueryService : IBugQueryService
     {
-        public async Task<IList<BugListItem>> GetBugsList()
+        public async Task<IList<Bug>> GetBugsList()
         {
             using (var ctx = new AppContext())
             {
-                return await ctx.BugListItems.OrderBy(x => x.Id).ToListAsync();;
+                return await ctx.Bugs.OrderBy(x => x.Id).ToListAsync();;
             }
         }
     }
