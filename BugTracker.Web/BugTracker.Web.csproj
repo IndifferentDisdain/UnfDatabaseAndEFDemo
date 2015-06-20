@@ -20,7 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -170,6 +170,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -179,15 +181,20 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Global.asax" />
     <Content Include="Icon.png" />
+    <Content Include="Scripts\app\extension-methods.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\app\bugs\index.jsx" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\react-0.13.1.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
     <Content Include="Web.config" />
     <Content Include="Views\web.config" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
@@ -220,10 +227,13 @@
     <TypeScriptCompile Include="Scripts\app\bugs\actions.ts" />
     <TypeScriptCompile Include="Scripts\app\bugs\models.ts" />
     <TypeScriptCompile Include="Scripts\app\bugs\store.ts" />
+    <TypeScriptCompile Include="Scripts\app\extension-methods.d.ts" />
     <TypeScriptCompile Include="Scripts\flux\base-store.ts" />
     <TypeScriptCompile Include="Scripts\flux\dispatcher.ts" />
     <TypeScriptCompile Include="Scripts\flux\event.ts" />
     <TypeScriptCompile Include="Scripts\flux\reactor.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\toastr\toastr.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BugTracker.Dependencies\BugTracker.Dependencies.csproj">

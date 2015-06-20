@@ -1,7 +1,7 @@
 ﻿module BugsModule {
 
     export class StatusChangedAction extends Flux.DispatcherAction {
-        constructor(public bug: BugListItem, newStatus: Statuses) {
+        constructor(public bugID: number, public newStatus: Statuses) {
             super("statusChanged");
         }
     }
