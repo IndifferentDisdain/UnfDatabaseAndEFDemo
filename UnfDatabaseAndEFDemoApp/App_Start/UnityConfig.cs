@@ -1,8 +1,8 @@
+using BugTracker.Dependencies;
 using Microsoft.Practices.Unity;
 using System;
-using UnfDatabaseAndEFDemoApp.DependencyManager;
 
-namespace UnfDatabaseAndEFDemoApp.App_Start
+namespace BugTracker.AppStart
 {
     public class UnityConfig
     {

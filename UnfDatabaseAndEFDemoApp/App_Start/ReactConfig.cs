@@ -1,8 +1,7 @@
-using React;
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(UnfDatabaseAndEFDemoApp.ReactConfig), "Configure")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(BugTracker.AppStart.ReactConfig), "Configure")]
 
-namespace UnfDatabaseAndEFDemoApp
+namespace BugTracker.AppStart
 {
 	public static class ReactConfig
 	{

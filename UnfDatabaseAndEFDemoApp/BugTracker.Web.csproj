@@ -219,17 +219,17 @@
     <TypeScriptCompile Include="Scripts\flux\reactor.ts" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.DependencyManager\UnfDatabaseAndEFDemoApp.DependencyManager.csproj">
+    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.DependencyManager\BugTracker.Dependencies.csproj">
       <Project>{0dd06e62-9253-4bbf-9988-01c17c44af7e}</Project>
-      <Name>UnfDatabaseAndEFDemoApp.DependencyManager</Name>
+      <Name>BugTracker.Dependencies</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.Domain\UnfDatabaseAndEFDemoApp.Domain.csproj">
+    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.Domain\BugTracker.Domain.csproj">
       <Project>{f4a9a668-6a4b-4854-bb57-ace481945292}</Project>
-      <Name>UnfDatabaseAndEFDemoApp.Domain</Name>
+      <Name>BugTracker.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.Services\UnfDatabaseAndEFDemoApp.Services.csproj">
+    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.Services\BugTracker.Services.csproj">
       <Project>{781c7b7f-4d7d-421a-8759-11d6cf198e9d}</Project>
-      <Name>UnfDatabaseAndEFDemoApp.Services</Name>
+      <Name>BugTracker.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

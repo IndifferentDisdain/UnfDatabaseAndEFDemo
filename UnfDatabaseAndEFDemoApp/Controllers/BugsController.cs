@@ -1,8 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using BugTracker.Services;
+using System.Threading.Tasks;
 using System.Web.Mvc;
-using UnfDatabaseAndEFDemoApp.Services;
 
-namespace UnfDatabaseAndEFDemoApp.Controllers
+namespace BugTracker.Controllers
 {
     public class BugsController : Controller
     {

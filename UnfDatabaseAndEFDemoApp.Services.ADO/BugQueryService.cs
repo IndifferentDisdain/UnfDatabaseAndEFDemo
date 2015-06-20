@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using BugTracker.Domain;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using UnfDatabaseAndEFDemoApp.Domain;
 
-namespace UnfDatabaseAndEFDemoApp.Services.ADO
+namespace BugTracker.Services.ADO
 {
     public class BugQueryService : IBugQueryService
     {

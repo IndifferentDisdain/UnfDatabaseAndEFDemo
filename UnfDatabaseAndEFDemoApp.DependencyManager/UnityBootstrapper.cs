@@ -1,10 +1,10 @@
-﻿using Microsoft.Practices.Unity;
+﻿using BugTracker.Services;
+using Microsoft.Practices.Unity;
 using System.Configuration;
-using UnfDatabaseAndEFDemoApp.Services;
-using ADO = UnfDatabaseAndEFDemoApp.Services.ADO;
-using EF = UnfDatabaseAndEFDemoApp.Services.EF;
+using ADO = BugTracker.Services.ADO;
+using EF = BugTracker.Services.EF;
 
-namespace UnfDatabaseAndEFDemoApp.DependencyManager
+namespace BugTracker.Dependencies
 {
     public static class UnityBootstrapper
     {

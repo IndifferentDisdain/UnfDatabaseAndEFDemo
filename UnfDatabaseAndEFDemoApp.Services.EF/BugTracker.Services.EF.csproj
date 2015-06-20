@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F4A9A668-6A4B-4854-BB57-ACE481945292}</ProjectGuid>
+    <ProjectGuid>{4A8D689F-0279-4777-A4DA-E535432FA887}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnfDatabaseAndEFDemoApp.Domain</RootNamespace>
-    <AssemblyName>UnfDatabaseAndEFDemoApp.Domain</AssemblyName>
+    <RootNamespace>BugTracker.Services.EF</RootNamespace>
+    <AssemblyName>BugTracker.Services.EF</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,9 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BugListItem.cs" />
-    <Compile Include="BugStatus.cs" />
+    <Compile Include="BugQueryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.Domain\BugTracker.Domain.csproj">
+      <Project>{f4a9a668-6a4b-4854-bb57-ace481945292}</Project>
+      <Name>BugTracker.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.Services\BugTracker.Services.csproj">
+      <Project>{781c7b7f-4d7d-421a-8759-11d6cf198e9d}</Project>
+      <Name>BugTracker.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

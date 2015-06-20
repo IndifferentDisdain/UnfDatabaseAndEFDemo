@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnfDatabaseAndEFDemoApp", "UnfDatabaseAndEFDemoApp\UnfDatabaseAndEFDemoApp.csproj", "{D7EED926-E68B-46F8-8221-023E89F5CBA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Web", "BugTracker.Web\BugTracker.Web.csproj", "{D7EED926-E68B-46F8-8221-023E89F5CBA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnfDatabaseAndEFDemoApp.Domain", "UnfDatabaseAndEFDemoApp.Domain\UnfDatabaseAndEFDemoApp.Domain.csproj", "{F4A9A668-6A4B-4854-BB57-ACE481945292}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Domain", "BugTracker.Domain\BugTracker.Domain.csproj", "{F4A9A668-6A4B-4854-BB57-ACE481945292}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnfDatabaseAndEFDemoApp.DependencyManager", "UnfDatabaseAndEFDemoApp.DependencyManager\UnfDatabaseAndEFDemoApp.DependencyManager.csproj", "{0DD06E62-9253-4BBF-9988-01C17C44AF7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Dependencies", "BugTracker.DependencyManager\BugTracker.Dependencies.csproj", "{0DD06E62-9253-4BBF-9988-01C17C44AF7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnfDatabaseAndEFDemoApp.Services", "UnfDatabaseAndEFDemoApp.Services\UnfDatabaseAndEFDemoApp.Services.csproj", "{781C7B7F-4D7D-421A-8759-11D6CF198E9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Services", "BugTracker.Services\BugTracker.Services.csproj", "{781C7B7F-4D7D-421A-8759-11D6CF198E9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnfDatabaseAndEFDemoApp.Services.ADO", "UnfDatabaseAndEFDemoApp.Services.ADO\UnfDatabaseAndEFDemoApp.Services.ADO.csproj", "{60632201-673E-4795-90ED-30CF83BB435C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Services.ADO", "BugTracker.Services.ADO\BugTracker.Services.ADO.csproj", "{60632201-673E-4795-90ED-30CF83BB435C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnfDatabaseAndEFDemoApp.Services.EF", "UnfDatabaseAndEFDemoApp.Services.EF\UnfDatabaseAndEFDemoApp.Services.EF.csproj", "{4A8D689F-0279-4777-A4DA-E535432FA887}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Services.EF", "BugTracker.Services.EF\BugTracker.Services.EF.csproj", "{4A8D689F-0279-4777-A4DA-E535432FA887}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "UnfDatabaseAndEFDemoApp.SqlServer", "UnfDatabaseAndEFDemoApp.SqlServer\UnfDatabaseAndEFDemoApp.SqlServer.sqlproj", "{41D1A5B1-5F91-477F-9700-3BF3C8EF5811}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BugTracker.SqlServer", "BugTracker.SqlServer\BugTracker.SqlServer.sqlproj", "{41D1A5B1-5F91-477F-9700-3BF3C8EF5811}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,8 +1,9 @@
-﻿using System;
+﻿using BugTracker.AppStart;
+using System;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace UnfDatabaseAndEFDemoApp
+namespace BugTracker
 {
     public class Global : System.Web.HttpApplication
     {
