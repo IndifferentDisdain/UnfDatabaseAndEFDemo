@@ -1,7 +1,7 @@
 ﻿
 namespace BugTracker.Domain
 {
-    public enum BugStatus
+    public enum BugStatus : byte
     {
         New,
         InProgress,
