@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Web", "BugTracke
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Domain", "BugTracker.Domain\BugTracker.Domain.csproj", "{F4A9A668-6A4B-4854-BB57-ACE481945292}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Dependencies", "BugTracker.DependencyManager\BugTracker.Dependencies.csproj", "{0DD06E62-9253-4BBF-9988-01C17C44AF7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Dependencies", "BugTracker.Dependencies\BugTracker.Dependencies.csproj", "{0DD06E62-9253-4BBF-9988-01C17C44AF7E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Services", "BugTracker.Services\BugTracker.Services.csproj", "{781C7B7F-4D7D-421A-8759-11D6CF198E9D}"
 EndProject

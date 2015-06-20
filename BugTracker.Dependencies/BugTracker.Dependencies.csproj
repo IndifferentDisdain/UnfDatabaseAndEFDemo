@@ -56,21 +56,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.Services.ADO\BugTracker.Services.ADO.csproj">
+    <ProjectReference Include="..\BugTracker.Services.ADO\BugTracker.Services.ADO.csproj">
       <Project>{60632201-673e-4795-90ed-30cf83bb435c}</Project>
       <Name>BugTracker.Services.ADO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.Services.EF\BugTracker.Services.EF.csproj">
+    <ProjectReference Include="..\BugTracker.Services.EF\BugTracker.Services.EF.csproj">
       <Project>{4a8d689f-0279-4777-a4da-e535432fa887}</Project>
       <Name>BugTracker.Services.EF</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.Services\BugTracker.Services.csproj">
+    <ProjectReference Include="..\BugTracker.Services\BugTracker.Services.csproj">
       <Project>{781c7b7f-4d7d-421a-8759-11d6cf198e9d}</Project>
       <Name>BugTracker.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

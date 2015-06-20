@@ -43,11 +43,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.Domain\BugTracker.Domain.csproj">
+    <ProjectReference Include="..\BugTracker.Domain\BugTracker.Domain.csproj">
       <Project>{f4a9a668-6a4b-4854-bb57-ace481945292}</Project>
       <Name>BugTracker.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UnfDatabaseAndEFDemoApp.Services\BugTracker.Services.csproj">
+    <ProjectReference Include="..\BugTracker.Services\BugTracker.Services.csproj">
       <Project>{781c7b7f-4d7d-421a-8759-11d6cf198e9d}</Project>
       <Name>BugTracker.Services</Name>
     </ProjectReference>
