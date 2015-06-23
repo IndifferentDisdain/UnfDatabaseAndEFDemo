@@ -11,11 +11,11 @@
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
+/*input,
 select,
 textarea {
     max-width: 280px;
-}
+}*/
 
 h1, h2, h3, h4, h5, h6 {
     color: white !important;

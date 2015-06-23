@@ -1,9 +1,20 @@
-﻿using System.Threading.Tasks;
+﻿using BugTracker.Domain;
+using System.Threading.Tasks;
 
 namespace BugTracker.Services.EF
 {
     public class BugCommandService : IBugCommandService
     {
+        public async Task<int> AddNewBugAsync(Bug bug)
+        {
+            using (var ctx = new AppContext())
+            {
+                ctx.Bugs.Add(bug);
+                await ctx.SaveChangesAsync();
+                return bug.Id;
+            }
+        }
+
         public async Task UpdateStatusAsync(int bugID, Domain.BugStatus newStatus)
         {
             using (var ctx = new AppContext())

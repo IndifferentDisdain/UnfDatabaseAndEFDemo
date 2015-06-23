@@ -9,6 +9,8 @@ namespace BugTracker.Services
 {
     public interface IBugCommandService
     {
+        Task<int> AddNewBugAsync(Bug bug);
+
         Task UpdateStatusAsync(int bugID, BugStatus newStatus);
     }
 }
