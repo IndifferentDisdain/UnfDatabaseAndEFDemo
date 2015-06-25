@@ -45,11 +45,13 @@ namespace BugTracker.Services.ADO
                 using (var cmd = conn.CreateCommand())
                 {
                     var retVal = new List<Bug>();
+                    var currentDateTime = DateTime.UtcNow;
 
                     cmd.CommandType = CommandType.Text;
                     cmd.Parameters.Add("@bugID", SqlDbType.Int).Value = bugID;
                     cmd.Parameters.Add("@newStatus", SqlDbType.TinyInt).Value = (int)newStatus;
-                    cmd.CommandText = "UPDATE Bug SET Status=@newStatus WHERE Id=@bugID";
+                    cmd.Parameters.Add("@lastActivityDate", SqlDbType.DateTime2).Value = currentDateTime;
+                    cmd.CommandText = "UPDATE Bug SET Status=@newStatus, LastActivityDate=@lastActivityDate WHERE Id=@bugID";
 
                     try
                     {

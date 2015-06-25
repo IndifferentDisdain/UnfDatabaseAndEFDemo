@@ -1,4 +1,5 @@
 ﻿using BugTracker.Domain;
+using System;
 using System.Threading.Tasks;
 
 namespace BugTracker.Services.EF
@@ -21,6 +22,7 @@ namespace BugTracker.Services.EF
             {
                 var bug = await ctx.Bugs.FindAsync(bugID);
                 bug.Status = newStatus;
+                bug.LastActivityDate = DateTime.UtcNow;
                 await ctx.SaveChangesAsync();
             }
         }

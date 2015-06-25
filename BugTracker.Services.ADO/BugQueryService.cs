@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace BugTracker.Services.ADO
@@ -18,7 +19,11 @@ namespace BugTracker.Services.ADO
                     var retVal = new List<Bug>();
 
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT Id, Title, Status FROM Bug ORDER BY Id";
+                    var sql = new StringBuilder();
+                    sql.AppendLine("SELECT b.Id, b.Title, b.Status, b.CreatedDate, b.LastActivityDate");
+                    sql.AppendLine("FROM Bug b");
+                    sql.AppendLine("ORDER BY LastActivityDate DESC, CreatedDate DESC");
+                    cmd.CommandText = sql.ToString();
 
                     try
                     {
@@ -27,12 +32,16 @@ namespace BugTracker.Services.ADO
                         {
                             while (await reader.ReadAsync())
                             {
-                                retVal.Add(new Bug
+                                var newBug = new Bug
                                 {
                                     Id = int.Parse(reader["Id"].ToString()),
                                     Title = reader["Title"].ToString(),
-                                    Status = (BugStatus)Enum.Parse(typeof(BugStatus), reader["Status"].ToString())
-                                });
+                                    Status = (BugStatus)Enum.Parse(typeof(BugStatus), reader["Status"].ToString()),
+                                    CreatedDate = DateTime.Parse(reader["CreatedDate"].ToString()),
+                                    LastActivityDate = DateTime.Parse(reader["LastActivityDate"].ToString())
+                                };
+
+                                retVal.Add(newBug);
                             }
                             return retVal;
                         }

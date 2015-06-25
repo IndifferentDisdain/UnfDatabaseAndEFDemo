@@ -12,7 +12,12 @@ namespace BugTracker.Services.EF
         {
             using (var ctx = new AppContext())
             {
-                return await ctx.Bugs.OrderBy(x => x.Id).ToListAsync();;
+                ctx.Configuration.ProxyCreationEnabled = false;
+                return await ctx
+                    .Bugs
+                    .OrderByDescending(x => x.LastActivityDate)
+                    .ThenByDescending(x => x.CreatedDate)
+                    .ToListAsync();;
             }
         }
     }

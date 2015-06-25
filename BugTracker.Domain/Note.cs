@@ -1,32 +1,28 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BugTracker.Domain
 {
-    public class Bug
+    public class Note
     {
         [Key]
         public int Id { get; set; }
 
-        [MaxLength(140)]
-        [Required]
-        public string Title { get; set; }
+        public int BugId { get; set; }
 
         [MaxLength(500)]
         [Required]
-        public string Description { get; set; }
-
-        [Required]
-        public BugStatus Status { get; set; }
+        public string Text { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime CreatedDate { get; set; }
 
-        public DateTime LastActivityDate { get; set; }
-
-        public virtual ICollection<Note> Notes { get; set; }
+        [ForeignKey("BugId")]
+        public virtual Bug Bug { get; set; }
     }
 }

@@ -67,12 +67,17 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Bug.sql" />
+    <Build Include="dbo\Tables\Note.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\PostDeployment\SeedInitialBugs.sql" />
     <None Include="LocalSQLExpress.publish.xml" />
+    <None Include="Scripts\PostDeployment\SeedInitialNotes.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\PostDeploymentParentScript.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="BugTracker.SqlServer.refactorlog" />
   </ItemGroup>
 </Project>

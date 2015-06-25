@@ -12,4 +12,5 @@ Post-Deployment Script Template
 
 PRINT 'Seeding initial bugs...'
 :r .\PostDeployment\SeedInitialBugs.sql
+:r .\PostDeployment\SeedInitialNotes.sql
 GO
