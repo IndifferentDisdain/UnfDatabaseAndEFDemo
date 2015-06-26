@@ -12,4 +12,11 @@
         status: Statuses;
     }
 
+    export class Note {
+        id: number;
+        bugId: number;
+        createdDate: string;
+        text: string;
+    }
+
 }

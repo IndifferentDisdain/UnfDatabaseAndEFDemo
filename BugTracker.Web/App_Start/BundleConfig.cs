@@ -26,7 +26,14 @@ namespace BugTracker.AppStart
             bundles.Add(new ScriptBundle("~/bundles/bugs").Include(
                 "~/scripts/app/bugs/models.js",
                 "~/scripts/app/bugs/actions.js",
-                "~/scripts/app/bugs/store.js"));
+                "~/scripts/app/bugs/store.js",
+                "~/Scripts/app/bugs/index.jsx"));
+
+            bundles.Add(new ScriptBundle("~/bundles/bug-notes").Include(
+                "~/scripts/app/bugs/models.js",
+                "~/scripts/app/bugs/actions.js",
+                "~/scripts/app/bugs/store-notes.js",
+                "~/Scripts/app/bugs/notes.jsx"));
 
         }
     }

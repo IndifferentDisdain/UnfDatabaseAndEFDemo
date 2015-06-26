@@ -1,11 +1,27 @@
-﻿@using BugTracker.Domain
+﻿@using Newtonsoft.Json;
+@using Newtonsoft.Json.Serialization;
+@using BugTracker.Domain;
+
 @model Bug
+
 @{
     ViewBag.Title = "Details";
 }
 
-@section scripts {
+@{
+    var camelCaseFormatter = new JsonSerializerSettings();
+    camelCaseFormatter.ContractResolver = new CamelCasePropertyNamesContractResolver();
+    var notes = JsonConvert.SerializeObject(Model.Notes, camelCaseFormatter);
+}
 
+@section scripts {
+    <script src="~/Scripts/react-0.13.1.js"></script>
+    @Scripts.Render("~/bundles/flux")
+    @Scripts.Render("~/bundles/bug-notes")
+
+    <script type="text/javascript">
+        React.render(new NotesFactory({ notes: @Html.Raw(notes) }), document.getElementById('notes-mount-point'));
+    </script>
 }
 
 <div class="container">
@@ -30,7 +46,7 @@
             <h3 class="panel-title">Notes</h3>
         </div>
         <div class="panel-body">
-            <div></div>
+            <div id="notes-mount-point"></div>
         </div>
     </div>
 </div>
