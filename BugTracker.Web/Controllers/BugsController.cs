@@ -24,6 +24,11 @@ namespace BugTracker.Controllers
             return View(await _bugQueryService.GetBugsList());
         }
 
+        public async Task<ActionResult> Details(int id)
+        {
+            return View(await _bugQueryService.GetBug(id));
+        }
+
         public async Task<ActionResult> UpdateBugStatus(int bugID, BugStatus newStatus)
         {
             try

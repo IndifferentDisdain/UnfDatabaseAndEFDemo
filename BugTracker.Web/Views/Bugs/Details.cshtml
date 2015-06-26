@@ -1,0 +1,37 @@
+﻿@using BugTracker.Domain
+@model Bug
+@{
+    ViewBag.Title = "Details";
+}
+
+@section scripts {
+
+}
+
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Bug Details</h3>
+        </div>
+        <div class="panel-body">
+            <div>
+                <p><label>Bug Id: </label>@Model.Id</p>
+                <p><label>Title: </label>@Model.Title</p>
+                <p><label>Description: </label>@Model.Description</p>
+                <p><label>Status: </label>@Model.Status</p>
+                <p><label>Created Date: </label>@Model.CreatedDate</p>
+                <p><label>Last Activity Date: </label>@Model.LastActivityDate</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Notes</h3>
+        </div>
+        <div class="panel-body">
+            <div></div>
+        </div>
+    </div>
+</div>
+

@@ -73,7 +73,7 @@ var Bugs = React.createClass({
                         <button className='btn btn-primary btn-lg' type='button' style={{marginTop: 20}} onClick={this.showBugModal} data-toggle='modal' data-target='#addBugModal'>Add Bug</button>
                     </div>
                     <div className='col-md-11'>
-                        <h2>Drag a bug to change its status.</h2>
+                        <h2>Drag a bug to change its status. Click a bug to view its details.</h2>
                     </div>
                 </div>
                 <div className='row bugs-kanban'>
@@ -142,12 +142,15 @@ var BugCategory = React.createClass({
 var Bug = React.createClass({
 
     render: function() {
+        var bugUrl = "/Bugs/Details/" + this.props.id;
         return (
             <li>
-                <div draggable="true" onDragStart={this.props.onDragStart.bind(null, this.props.id)}>
-                    <h4>Bug #: {this.props.id}</h4>
-                    <p>{this.props.title}</p>
-                </div>
+                <a href={bugUrl}>
+                    <div draggable="true" onDragStart={this.props.onDragStart.bind(null, this.props.id)}>
+                        <h4>Bug #: {this.props.id}</h4>
+                        <p>{this.props.title}</p>
+                    </div>
+                </a>
             </li>
         );
     }

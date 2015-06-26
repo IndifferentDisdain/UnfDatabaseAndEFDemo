@@ -20,5 +20,14 @@ namespace BugTracker.Services.EF
                     .ToListAsync();;
             }
         }
+
+        public async Task<Bug> GetBug(int id)
+        {
+            using (var ctx = new AppContext())
+            {
+                ctx.Configuration.ProxyCreationEnabled = false;
+                return await ctx.Bugs.Include(x => x.Notes).FirstOrDefaultAsync(x => x.Id == id);
+            }
+        }
     }
 }

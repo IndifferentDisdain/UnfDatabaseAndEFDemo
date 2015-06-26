@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-.bugs-kanban > div > ul > li > div > h1,h2,h3,h4,h5,h6 {
+.bugs-kanban > div > ul > li > a > div > h1,h2,h3,h4,h5,h6 {
     margin: 0 !important;
     padding-top: 10px;
 }
@@ -38,28 +38,31 @@ h1, h2, h3, h4, h5, h6 {
     list-style: none;
 }
 
-.bugs-kanban > div > ul > li > div {
+    .bugs-kanban > div > ul > li > a {
+        text-decoration: none;
+    }
+
+.bugs-kanban > div > ul > li > a > div {
     height: 200px;
     border: solid;
     border-width: 5px;
     border-color: black;
     color: white;
-    cursor: move;
     margin: 10px;
 }
 
-.bugs-kanban > div > ul > li > div > p {
+.bugs-kanban > div > ul > li > a > div > p {
     padding: 10px;
 }
 
-.bugs-kanban > .bugs-new > ul > li > div {
+.bugs-kanban > .bugs-new > ul > li > a > div {
     background-color: red;
 }
 
-.bugs-kanban > .bugs-in-progress > ul > li > div {
+.bugs-kanban > .bugs-in-progress > ul > li > a > div {
     background-color: rgb(139, 139, 26);
 }
 
-.bugs-kanban > .bugs-completed > ul > li > div {
+.bugs-kanban > .bugs-completed > ul > li > a > div {
     background-color: green;
 }
