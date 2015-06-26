@@ -11,8 +11,15 @@ module BugsModule {
             super("BugNoteStore_Change");
         }
 
-        public initialize(model: Array<Note>) {
-            this._notes = model;
+        public initialize(model: Array<any>) {
+            model.forEach(note => {
+                this._notes.push({
+                    id: note.id,
+                    text: note.text,
+                    createdDate: new Date(note.createdDate),
+                    bugId: note.bugId
+                });
+            });
         }
 
         // TODO.JS: addNewNote method

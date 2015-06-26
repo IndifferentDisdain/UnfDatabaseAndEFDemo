@@ -15,7 +15,7 @@
     export class Note {
         id: number;
         bugId: number;
-        createdDate: string;
+        createdDate: Date;
         text: string;
     }
 
