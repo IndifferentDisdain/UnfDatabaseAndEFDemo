@@ -70,7 +70,7 @@ var Bugs = React.createClass({
                 </div>
                 <div className='row'>
                     <div className='col-md-1'>
-                        <button className='btn btn-primary btn-lg' type='button' style={{marginTop: 20}} onClick={this.showBugModal} data-toggle='modal' data-target='#addBugModal'>Add Bug</button>
+                        <button className='btn btn-primary btn-lg' type='button' style={{marginTop: 20}} data-toggle='modal' data-target='#addBugModal'>Add Bug</button>
                     </div>
                     <div className='col-md-11'>
                         <h2>Drag a bug to change its status. Click a bug to view its details.</h2>

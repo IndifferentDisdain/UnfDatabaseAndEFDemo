@@ -232,3 +232,5 @@ FakesAssemblies/
 /BugTracker.Web/Scripts/flux/event.js.map
 /BugTracker.Web/Scripts/flux/reactor.js
 /BugTracker.Web/Scripts/flux/reactor.js.map
+/BugTracker.Web/Scripts/app/bugs/store-notes.js
+/BugTracker.Web/Scripts/app/bugs/store-notes.js.map

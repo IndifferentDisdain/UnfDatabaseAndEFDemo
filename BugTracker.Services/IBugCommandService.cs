@@ -12,5 +12,7 @@ namespace BugTracker.Services
         Task<int> AddNewBugAsync(Bug bug);
 
         Task UpdateStatusAsync(int bugID, BugStatus newStatus);
+
+        Task<int> AddNewNoteAsync(Note note);
     }
 }

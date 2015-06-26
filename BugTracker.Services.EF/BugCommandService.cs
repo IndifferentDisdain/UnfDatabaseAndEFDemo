@@ -32,5 +32,18 @@ namespace BugTracker.Services.EF
                 await ctx.SaveChangesAsync();
             }
         }
+
+        public async Task<int> AddNewNoteAsync(Note note)
+        {
+            using (var ctx = new AppContext())
+            {
+                ctx.Notes.Add(note);
+                note.CreatedDate = DateTime.UtcNow;
+
+                await ctx.SaveChangesAsync();
+
+                return note.Id;
+            }
+        }
     }
 }

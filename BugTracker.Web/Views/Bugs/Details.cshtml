@@ -11,6 +11,7 @@
 @{
     var camelCaseFormatter = new JsonSerializerSettings();
     camelCaseFormatter.ContractResolver = new CamelCasePropertyNamesContractResolver();
+    
     var notes = JsonConvert.SerializeObject(Model.Notes, camelCaseFormatter);
 }
 
@@ -20,7 +21,7 @@
     @Scripts.Render("~/bundles/bug-notes")
 
     <script type="text/javascript">
-        React.render(new NotesFactory({ notes: @Html.Raw(notes) }), document.getElementById('notes-mount-point'));
+        React.render(new NotesFactory({ notes: @Html.Raw(notes), bugId: @Model.Id }), document.getElementById('notes-mount-point'));
     </script>
 }
 

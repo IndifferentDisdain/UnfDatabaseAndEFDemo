@@ -26,7 +26,12 @@ namespace BugTracker.Services.EF
             using (var ctx = new AppContext())
             {
                 ctx.Configuration.ProxyCreationEnabled = false;
-                return await ctx.Bugs.Include(x => x.Notes).FirstOrDefaultAsync(x => x.Id == id);
+
+                var bug = await ctx.Bugs.Include(x => x.Notes).FirstOrDefaultAsync(x => x.Id == id);
+
+                // HACK.JS: This is annoying... very easy to do in ADO.NET...
+                bug.Notes = bug.Notes.OrderByDescending(x => x.CreatedDate).ToList();
+                return bug;
             }
         }
     }

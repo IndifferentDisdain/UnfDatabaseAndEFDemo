@@ -55,5 +55,19 @@ namespace BugTracker.Controllers
                 return Json(new { success = false, message = ex.Message });
             }
         }
+
+        [HttpPost]
+        public async Task<ActionResult> AddNewNote(Note note)
+        {
+            try
+            {
+                var retVal = await _bugCommandService.AddNewNoteAsync(note);
+                return Json(new { success = true, id = retVal });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
     }
 }

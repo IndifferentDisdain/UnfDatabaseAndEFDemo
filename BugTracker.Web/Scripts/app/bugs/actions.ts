@@ -12,4 +12,10 @@
         }
     }
 
+    export class AddNewNoteAction extends Flux.DispatcherAction {
+        constructor(public note: string) {
+            super("addNewNote");
+        }
+    }
+
 }

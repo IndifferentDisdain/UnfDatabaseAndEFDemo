@@ -20,7 +20,7 @@ module BugsModule {
 
             $.ajax({
                 type: 'POST',
-                url: 'Bugs/AddNewBug',
+                url: '/Bugs/AddNewBug',
                 data: {
                     title: action.title,
                     description: action.description
