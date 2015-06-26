@@ -15,6 +15,36 @@ module BugsModule {
             this._bugs = model;
         }
 
+        public addNewBug(action: AddNewBugAction) {
+            var self = this;
+
+            $.ajax({
+                type: 'POST',
+                url: 'Bugs/AddNewBug',
+                data: {
+                    title: action.title,
+                    description: action.description
+                },
+                dataType: 'json',
+                success: function (data) {
+                    if (data.success) {
+                        self._bugs.unshift({
+                            id: data.id,
+                            title: action.title,
+                            status: BugsModule.Statuses.New
+                        });
+                        toastr.success('New bug ' + data.id + ' saved!', 'Horray!');
+                        self.emitChange();
+                    } else {
+                        toastr.error(data.message || 'Unable to save new bug.', 'Oops!');
+                    }
+                },
+                error: function (xhr, text, status) {
+                    toastr.error(status, 'Oops!');
+                }
+            });
+        }
+
         public statusChanged(action: StatusChangedAction) {
             var bugToUpdate = this._bugs.findByProp("id", action.bugID).firstOrDefault();
 

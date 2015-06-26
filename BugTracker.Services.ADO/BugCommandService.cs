@@ -18,9 +18,11 @@ namespace BugTracker.Services.ADO
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandType = CommandType.Text;
+
                     cmd.Parameters.Add("@title", SqlDbType.VarChar).Value = newBug.Title;
                     cmd.Parameters.Add("@description", SqlDbType.VarChar).Value = newBug.Description;
                     cmd.Parameters.Add("@status", SqlDbType.TinyInt).Value = (byte)BugStatus.New;
+
                     // Don't use @@IDENTITY!
                     cmd.CommandText = "INSERT INTO Bug (Title, Description, Status) VALUES (@title, @description, @status); SELECT SCOPE_IDENTITY();";
 
@@ -51,6 +53,7 @@ namespace BugTracker.Services.ADO
                     cmd.Parameters.Add("@bugID", SqlDbType.Int).Value = bugID;
                     cmd.Parameters.Add("@newStatus", SqlDbType.TinyInt).Value = (int)newStatus;
                     cmd.Parameters.Add("@lastActivityDate", SqlDbType.DateTime2).Value = currentDateTime;
+
                     cmd.CommandText = "UPDATE Bug SET Status=@newStatus, LastActivityDate=@lastActivityDate WHERE Id=@bugID";
 
                     try

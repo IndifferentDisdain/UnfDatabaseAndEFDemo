@@ -24,6 +24,19 @@ var Bugs = React.createClass({
 		});
     },
 
+    onAddBug: function(e) {
+        e.preventDefault();
+
+        var newTitleNode = this.refs.newBugTitle.getDOMNode(),
+            newDescriptionNode = this.refs.newBugDescription.getDOMNode();
+
+		Flux.AppDispatcher.instance.handleViewAction(new BugsModule.AddNewBugAction(newTitleNode.value, newDescriptionNode.value));
+
+        newTitleNode.value = '';
+        newDescriptionNode.value = '';
+        $('#addBugModal').modal('hide');
+    },
+
     onDragStart: function(bugID, event) {
         event.dataTransfer.setData("text/plain", bugID);
     },
@@ -38,28 +51,26 @@ var Bugs = React.createClass({
                                 <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 <h3 className="modal-title" style={{color: 'black !important'}} id='addBugModalLabel'>Add Bug</h3>
                             </div>
-                            <form method='post' action='/bugs/addnewbug'>
                                 <div className='modal-body'>
                                         <div className='form-group'>
                                             <label htmlFor='newBugTitle'>Title</label>
-                                            <input type='text' name='title' id='newBugTitle' className='form-control' placeholder='Max 140 chars' />
+                                            <input type='text' name='title' id='newBugTitle' className='form-control' ref='newBugTitle' placeholder='Max 140 chars' />
                                         </div>
                                         <div className='form-group'>
                                             <label htmlFor='newBugDescription'>Description</label>
-                                            <textarea rows='4' style={{resize: 'vertical'}} name='description' id='newBugDescription' className='form-control' placeholder='Max 500 chars' />
+                                            <textarea rows='4' style={{resize: 'vertical'}} name='description' id='newBugDescription' ref='newBugDescription' className='form-control' placeholder='Max 500 chars' />
                                         </div>
                                 </div>
                                 <div className='modal-footer'>
                                     <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-                                    <input type="submit" className="btn btn-primary" value='Add' />
+                                    <button type="buton" onClick={this.onAddBug} className="btn btn-primary">Add</button>
                                 </div>
-                            </form>
                         </div>
                     </div>
                 </div>
                 <div className='row'>
                     <div className='col-md-1'>
-                        {/*<button className='btn btn-primary btn-lg' type='button' style={{marginTop: 20}} onClick={this.showBugModal} data-toggle='modal' data-target='#addBugModal'>Add Bug</button> */}
+                        <button className='btn btn-primary btn-lg' type='button' style={{marginTop: 20}} onClick={this.showBugModal} data-toggle='modal' data-target='#addBugModal'>Add Bug</button>
                     </div>
                     <div className='col-md-11'>
                         <h2>Drag a bug to change its status.</h2>

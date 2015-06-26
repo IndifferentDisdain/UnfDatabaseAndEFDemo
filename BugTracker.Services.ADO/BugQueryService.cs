@@ -19,10 +19,12 @@ namespace BugTracker.Services.ADO
                     var retVal = new List<Bug>();
 
                     cmd.CommandType = CommandType.Text;
+
                     var sql = new StringBuilder();
                     sql.AppendLine("SELECT b.Id, b.Title, b.Status, b.CreatedDate, b.LastActivityDate");
                     sql.AppendLine("FROM Bug b");
                     sql.AppendLine("ORDER BY LastActivityDate DESC, CreatedDate DESC");
+
                     cmd.CommandText = sql.ToString();
 
                     try

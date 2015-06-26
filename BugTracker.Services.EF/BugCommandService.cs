@@ -11,7 +11,11 @@ namespace BugTracker.Services.EF
             using (var ctx = new AppContext())
             {
                 ctx.Bugs.Add(bug);
+
+                bug.LastActivityDate = DateTime.UtcNow;
+
                 await ctx.SaveChangesAsync();
+
                 return bug.Id;
             }
         }
@@ -21,8 +25,10 @@ namespace BugTracker.Services.EF
             using (var ctx = new AppContext())
             {
                 var bug = await ctx.Bugs.FindAsync(bugID);
+
                 bug.Status = newStatus;
                 bug.LastActivityDate = DateTime.UtcNow;
+
                 await ctx.SaveChangesAsync();
             }
         }

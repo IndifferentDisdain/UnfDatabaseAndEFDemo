@@ -6,4 +6,10 @@
         }
     }
 
+    export class AddNewBugAction extends Flux.DispatcherAction {
+        constructor(public title: string, public description: string) {
+            super("addNewBug");
+        }
+    }
+
 }
